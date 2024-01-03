@@ -1,0 +1,4986 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+    <title>ellagym</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            padding: 0;
+
+        }
+
+        .mainslide {
+            height: 7vh;
+            width: 100%;
+
+            /* border: 1px solid red; */
+            overflow: hidden;
+
+        }
+
+        .slidebox {
+            height: 6vh;
+            width: 300%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation-duration: 10s;
+            animation-name: slide;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            /* animation-fill-mode: forwards; */
+            /* border: 1px solid green; */
+
+
+        }
+
+        @keyframes slide {
+            0% {
+
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+
+            }
+
+        }
+
+        .slide {
+            height: 6vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: rgb(86, 34, 255);
+            /* border: 2px solid blue; */
+
+
+        }
+
+        .smallbox {
+            height: 5vh;
+            width: 3%;
+            /* border: 1px solid; */
+
+        }
+
+        .bolt {
+            font-size: 30px;
+            color: rgb(185, 211, 36);
+        }
+
+        .smallbox2 {
+            height: 5vh;
+            width: 50%;
+            display: flex;
+            align-items: center;
+            padding-left: 15px;
+            /* border: 1px solid; */
+        }
+
+        .para {
+            font-family: 'Jost', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            color: white;
+        }
+
+        .spn {
+            font-family: 'Jost', sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+            color: rgb(185, 211, 36);
+            cursor: pointer;
+        }
+
+        @media screen and (max-width:1071px) {
+
+
+            .smallbox2 {
+                width: max-content;
+            }
+
+            .para {
+                font-size: 12px;
+            }
+        }
+
+        @media screen and (max-width:573px) {
+            .slidebox {
+                animation-duration: 3s;
+                animation-name: slide;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+            }
+        }
+
+        .mainbar1 {
+            height: auto;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* background-color: black; */
+            /* border: 1px solid; */
+        }
+
+        .smallbox3 {
+            height: 6vh;
+            width: 15%;
+            display: flex;
+            justify-content: space-evenly;
+            margin-left: 20px;
+            /* border: 1px solid yellow; */
+        }
+
+        .minibox {
+            height: 6vh;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #eeeeee;
+            /* border: 1px solid; */
+
+        }
+
+        .text {
+            font-family: 'Jost', sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .minibox2 {
+            height: 6vh;
+            width: 32%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            /* border: 1px solid; */
+
+        }
+
+
+
+        .smallbox4 {
+            height: 6vh;
+            width: max-content;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* border: 1px solid; */
+        }
+
+        .text2 {
+
+            font-family: 'Jost', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            cursor: pointer;
+        }
+
+        .smallbox5 {
+            height: auto;
+            width: 30%;
+            display: flex;
+            /* border: 1px solid; */
+
+        }
+
+        .minibox2 {
+            height: 6vh;
+            width: 150px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            /* border: 1px solid; */
+        }
+
+        .small {
+            height: 4vh;
+            width: max-content;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: scale(1);
+            transition: all 0.5s;
+            /* border: 1px solid; */
+        }
+
+        .minibox2:hover .small {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+
+        .smallcircle {
+            height: 20px;
+            width: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100px;
+            background-color: rgb(151, 255, 16);
+            /* border: 1px solid; */
+        }
+
+
+
+        .minibox3 {
+            height: 6vh;
+            width: 280px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* border: 1px solid; */
+        }
+
+        .minibox4 {
+            height: 6vh;
+            width: 15%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: scale(1);
+            transition: all linear 2s;
+            /* border: 1px solid; */
+
+        }
+
+        .globe {
+            color: black;
+
+        }
+
+        .minibox4:hover .globe {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+
+        @media screen and (max-width:1036px) {
+            .smallbox5 {
+                flex-direction: column;
+                flex-wrap: wrap;
+                display: flex;
+                align-items: end;
+
+            }
+        }
+
+        @media screen and (max-width:1022px) {
+            .smallbox5 {
+                display: none;
+            }
+
+            .smallbox4 {
+                display: none;
+            }
+
+            .mainbar1 {
+                background-color: black;
+            }
+
+            .smallbox3 {
+                width: max-content;
+            }
+
+            .minibox {
+                width: 100%;
+            }
+        }
+
+        .mainbar2 {
+            height: max-content;
+            width: auto;
+            z-index: 2;
+            position: sticky;
+            left: 0;
+            top: 0;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: black;
+            /* border: 1px solid; */
+            padding: 10px 0;
+        }
+
+        .logobox {
+            height: 7vh;
+            width: 8%;
+            /* border: 1px solid; */
+        }
+
+        .img1 {
+            height: 100%;
+            width: 100%;
+        }
+
+        .content {
+            height: 7vh;
+            width: 73%;
+            position: relative;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            /* flex-wrap: wrap; */
+            /* border: 1px solid red; */
+        }
+
+        .list {
+            color: white;
+            list-style: none;
+            /* display: block; */
+            font-family: 'Jost', sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            /* height: 40px; */
+            /* border: 2px solid lime ; */
+
+
+        }
+
+        .box2 {
+            height: 70vh;
+            width: 138%;
+
+            left: -15%;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 20px;
+            visibility: hidden;
+            position: absolute;
+            top: 35px;
+            transition: all 0.1s linear;
+            background-color: white;
+            /* border: 1px solid; */
+
+        }
+
+        .list:hover {
+
+            border-bottom: 1px solid black;
+            cursor: pointer;
+        }
+
+        .list:hover .box2 {
+            visibility: visible;
+            margin-top: 10px;
+        }
+
+        .bigtext {
+            height: auto;
+            width: 19%;
+            /* border: 1px solid; */
+
+        }
+
+        .spn2 {
+            font-family: 'Jost', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            margin-left: 10px;
+            color: black;
+
+        }
+
+        .spn3 {
+            font-family: 'Jost', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            margin-left: 10px;
+            color: rgb(240, 35, 104);
+
+        }
+
+        .spn3:hover {
+            color: black;
+            cursor: pointer;
+        }
+
+        .content2 {
+            height: auto;
+            width: max-content;
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+            margin-top: 10px;
+            /* border: 1px solid; */
+        }
+
+        .content2:hover {
+            border-bottom: 1px solid black;
+        }
+
+        .list2 {
+            color: black;
+            position: relative;
+            font-family: 'Jost', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            display: block;
+        }
+
+        .box3 {
+            height: 55vh;
+            width: 138%;
+
+            left: -15%;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 20px;
+            visibility: hidden;
+            position: absolute;
+            top: 35px;
+            transition: all 0.1s linear;
+            background-color: white;
+            /* border: 1px solid; */
+
+        }
+
+        .list:hover .box3 {
+            visibility: visible;
+            margin-top: 10px;
+        }
+
+        .box4 {
+            height: 45vh;
+            width: 20%;
+            left: 300px;
+            display: flex;
+            padding-top: 20px;
+            visibility: hidden;
+            position: absolute;
+            margin-top: 40px;
+            transition: all 0.1s linear;
+            background-color: white;
+            /* border: 1px solid; */
+
+
+
+        }
+
+        .list:hover .box4 {
+            visibility: visible;
+            margin-top: 10px;
+        }
+
+        .box5 {
+            height: 55vh;
+            width: 20%;
+            display: flex;
+            padding-top: 20px;
+            visibility: hidden;
+            position: absolute;
+            margin-top: 40px;
+            transition: all 0.1s linear;
+            background-color: white;
+            /* border: 1px solid; */
+        }
+
+        .list:hover .box5 {
+            visibility: visible;
+            margin-top: 10px;
+        }
+
+        #right {
+            position: absolute;
+            left: 90%;
+            top: 62px;
+            font-size: 10px;
+            color: black;
+
+        }
+
+        .smallbox6 {
+            height: 12vh;
+            width: 130%;
+            right: -200px;
+            top: 50px;
+            position: absolute;
+            visibility: hidden;
+            margin-top: 40px;
+            transition: all 0.1s linear;
+            background-color: white;
+            border: 1px solid rgb(190, 189, 189);
+
+        }
+
+        .content2:hover .smallbox6 {
+            visibility: visible;
+            margin-top: 8px;
+        }
+
+        .smallbox7 {
+            height: 12vh;
+            width: 130%;
+            right: -200px;
+            top: 130px;
+            position: absolute;
+            visibility: hidden;
+            margin-top: -5px;
+            transition: all 0.1s linear;
+            background-color: white;
+            border: 1px solid rgb(190, 189, 189);
+
+        }
+
+        #icon {
+            position: absolute;
+            left: 90%;
+            top: 140px;
+            font-size: 10px;
+            color: black;
+        }
+
+        .content2:hover .smallbox7 {
+            visibility: visible;
+            margin-top: 8px;
+        }
+
+        .smallbox8 {
+            height: 14vh;
+            width: 130%;
+            right: -200px;
+            top: 180px;
+            position: absolute;
+            visibility: hidden;
+            margin-top: -8px;
+            transition: all 0.1s linear;
+            background-color: white;
+            border: 1px solid rgb(190, 189, 189);
+
+
+        }
+
+        .content2:hover .smallbox8 {
+            visibility: visible;
+            margin-top: 8px;
+        }
+
+        #icon2 {
+            position: absolute;
+            left: 90%;
+            top: 198px;
+            font-size: 10px;
+            color: black;
+        }
+
+        .smallbox9 {
+            height: 14vh;
+            width: 130%;
+            right: -200px;
+            top: 210px;
+            position: absolute;
+            visibility: hidden;
+            margin-top: -5px;
+            transition: all 0.1s linear;
+            background-color: white;
+            border: 1px solid rgb(190, 189, 189);
+
+
+        }
+
+        .content2:hover .smallbox9 {
+            visibility: visible;
+            margin-top: 8px;
+        }
+
+        #icon3 {
+            position: absolute;
+            left: 90%;
+            top: 225px;
+            font-size: 10px;
+            color: black;
+        }
+
+        .smallbox10 {
+            height: 14vh;
+            width: 130%;
+            right: -200px;
+            top: 240px;
+            position: absolute;
+            visibility: hidden;
+            margin-top: -5px;
+            transition: all 0.1s linear;
+            background-color: white;
+            border: 1px solid rgb(190, 189, 189);
+
+
+        }
+
+        .content2:hover .smallbox10 {
+            visibility: visible;
+            margin-top: 8px;
+        }
+
+        #icon4 {
+            position: absolute;
+            left: 90%;
+            top: 250px;
+            font-size: 10px;
+            color: black;
+        }
+
+        .smallbox11 {
+            height: 14vh;
+            width: 130%;
+            right: -200px;
+            top: 265px;
+            position: absolute;
+            visibility: hidden;
+            margin-top: -5px;
+            transition: all 0.1s linear;
+            background-color: white;
+            border: 1px solid rgb(190, 189, 189);
+
+
+        }
+
+        .content2:hover .smallbox11 {
+            visibility: visible;
+            margin-top: 8px;
+        }
+
+        #icon5 {
+            position: absolute;
+            left: 90%;
+            top: 276px;
+            font-size: 10px;
+            color: black;
+        }
+
+        .bigtext2 {
+            height: 60vh;
+            width: 18%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            overflow: hidden;
+            /* border: 1px solid; */
+            padding: 1px;
+
+        }
+
+        .box6 {
+            height: 70vh;
+            width: 142.5%;
+            left: -20%;
+            display: flex;
+            justify-content: space-evenly;
+
+            padding-top: 20px;
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            margin-top: 40px;
+            transition: all 0.1s linear;
+            background-color: white;
+            /* border: 1px solid; */
+
+
+
+        }
+
+        .list:hover .box6 {
+            visibility: visible;
+            margin-top: 10px;
+            opacity: 1;
+        }
+
+        .imgbox {
+            height: auto;
+            width: 60%;
+            margin-top: 20px;
+            /* border: 1px solid; */
+        }
+
+        .img2 {
+            height: 100%;
+            width: 100%;
+        }
+
+        .textbox {
+            height: 3vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            /* border: 1px solid; */
+        }
+
+        .text3 {
+            padding-top: 8px;
+            font-family: 'Jost', sans-serif;
+            font-size: 14px;
+            font-weight: bolder;
+        }
+
+        .imgbox3 {
+            height: 5vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            /* margin-top: 10px; */
+            /* border: 1px solid; */
+        }
+
+        .imgbox4 {
+            height: 6vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            /* border: 1px solid; */
+        }
+
+
+
+
+        .circle {
+            height: 29px;
+            width: 29px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100px;
+            background-color: wheat;
+            /* border: 1px solid; */
+        }
+
+        .circle2 {
+            height: 29px;
+            width: 29px;
+            border-radius: 100px;
+            background-color: whitesmoke;
+            /* border: 1px solid; */
+
+        }
+
+        .smallcircle2 {
+            height: 25px;
+            width: 25px;
+            background-color: green;
+            border-radius: 100px;
+            /* border: 1px solid; */
+        }
+
+        .smallcircle3 {
+            height: 25px;
+            width: 25px;
+            background-color: palevioletred;
+            border-radius: 100px;
+            /* border: 1px solid; */
+        }
+
+        .img3 {
+            height: 100%;
+            width: 100%;
+        }
+
+        .bigtext3 {
+            height: 50vh;
+            width: 15%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* flex-direction: column; */
+            overflow: hidden;
+            border: 1px solid;
+            /* padding: 1px; */
+
+
+        }
+
+        .img4 {
+            height: 100%;
+            width: 100%;
+            transform: scale(1);
+            transition: all 1.0s;
+
+        }
+
+        .bigtext3:hover .img4 {
+            transform: scale(1.08);
+
+
+        }
+
+        .bigbox {
+            height: 28vh;
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            overflow: hidden;
+            /* border: 1px solid; */
+
+        }
+
+        .bigtext2s {
+            height: 60vh;
+            width: 40%;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-direction: column;
+            overflow: hidden;
+            /* border: 1px solid; */
+            padding: 1px;
+
+        }
+
+        .bigbox2 {
+            height: 60vh;
+            width: 100%;
+            overflow: hidden;
+            /* border: 1px solid; */
+        }
+
+        .img5 {
+            height: 100%;
+            width: 100%;
+            transform: scale(1);
+            transition: all 1.0s;
+        }
+
+        .bigbox2:hover .img5 {
+            transform: scale(1.05);
+        }
+
+        .box8 {
+            height: 70vh;
+            width: 142.5%;
+            left: -20%;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            margin-top: 40px;
+            transition: all 0.1s linear;
+            background-color: white;
+            /* border: 1px solid; */
+
+
+
+        }
+
+        .list:hover .box8 {
+            visibility: visible;
+            margin-top: 10px;
+            opacity: 1;
+        }
+
+        .bigbox4 {
+            height: 30vh;
+            width: 90%;
+            display: flex;
+            margin-left: 50px;
+            overflow: hidden;
+            /* border: 1px solid; */
+
+
+        }
+
+        .picbox {
+            height: 30vh;
+            width: 30%;
+            overflow: hidden;
+            /* border: 1px solid; */
+        }
+
+        .img6 {
+            height: 100%;
+            width: 100%;
+            transform: scale(1);
+            transition: all 1.0s;
+        }
+
+        .picbox:hover .img6 {
+            transform: scale(1.05);
+        }
+
+        .picbox2 {
+            height: 30vh;
+            width: 30%;
+            overflow: hidden;
+            /* border: 1px solid; */
+        }
+
+        .picbox2:hover .img6 {
+            transform: scale(1.05);
+        }
+
+        .picbox3 {
+            height: 30vh;
+            width: 45%;
+            flex-direction: column;
+            display: flex;
+            justify-content: space-around;
+            /* border: 2px solid red; */
+        }
+
+        .smallbar {
+            height: 4vh;
+            width: 25%;
+            /* border: 1px solid; */
+        }
+
+        .smallbar2 {
+            height: 20vh;
+            width: 90%;
+            display: flex;
+            gap: 5px;
+            flex-direction: column;
+            flex-wrap: wrap;
+            /* border: 1px solid; */
+
+        }
+
+        .spn4 {
+            color: black;
+            padding-left: 10px;
+            padding-top: 10px;
+            font-family: 'Jost', sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+
+        }
+
+        .ellabox {
+            height: 20vh;
+            width: 12%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            visibility: hidden;
+            position: absolute;
+            margin-top: -5px;
+            transition: all 0.1s linear;
+            background-color: white;
+            /* border: 1px solid; */
+
+
+
+
+
+
+
+        }
+
+        .list:hover .ellabox {
+            visibility: visible;
+            margin-top: 9px;
+
+        }
+
+        .box1 {
+            height: 7vh;
+            width: 15%;
+            display: flex;
+            align-items: center;
+            border: 1px solid white;
+        }
+
+        .minibox11 {
+            height: 6vh;
+            width: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* border: 1px solid; */
+        }
+
+        #inp {
+            height: 6vh;
+            width: 80%;
+            outline: none;
+            border: none;
+            padding-left: 10px;
+            background-color: black;
+            color: gray;
+        }
+
+        .glass {
+            color: white;
+            font-size: 28px;
+        }
+
+        @media screen and (max-width:1071px) {
+            .content {
+                width: 50%;
+                flex-wrap: wrap;
+                gap: 10px;
+
+            }
+        }
+
+        @media screen and (max-width:1022px) {
+            .mainbar2 {
+                display: none;
+            }
+        }
+
+        .mainbar3 {
+            height: auto;
+            width: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            display: none;
+            /* border: 1px solid; */
+
+
+        }
+
+        .smallbox12 {
+            height: auto;
+            width: 60px;
+            display: flex;
+            justify-content: space-around;
+            margin-left: 10px;
+            /* border: 1px solid; */
+        }
+
+        .minibox12 {
+            height: auto;
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* border: 1px solid; */
+        }
+
+        .bars {
+            gap: 15px;
+            font-size: 20px;
+        }
+
+        .smallbox13 {
+            height: auto;
+            width: 100px;
+            gap: 15px;
+            /* border: 1px solid; */
+        }
+
+        .img7 {
+            height: 100%;
+            width: 100%;
+        }
+
+        .smallbox14 {
+            height: auto;
+            width: 60px;
+            display: flex;
+            justify-content: space-around;
+            /* border: 1px solid; */
+
+        }
+
+        @media screen and (max-width:1022px) {
+            .mainbar3 {
+                display: flex;
+            }
+        }
+
+        .longtextbar {
+            height: 9vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1px;
+            background-color: #b7ff00;
+            /* border: 1px solid; */
+        }
+
+        .textbox {
+            height: 7vh;
+            width: 80%;
+            display: flex;
+            align-items: center;
+            /* border: 1px solid; */
+        }
+
+        .text6 {
+            font-family: 'Jost', sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            color: black;
+        }
+
+        @media screen and (max-width:489px) {
+            .textbox {
+                width: 100%;
+            }
+
+            .text6 {
+                font-size: 16px;
+            }
+        }
+
+        .parent1 {
+            height: auto;
+            width: 100%;
+            /* border: 1px solid; */
+
+
+
+        }
+
+        .bigpicbox {
+            height: auto;
+            width: auto;
+            position: relative;
+            /* border: 1px solid yellow; */
+        }
+
+        .img8 {
+            height: 100%;
+            width: 100%;
+
+        }
+
+        .textbox2 {
+            height: auto;
+            width: 600px;
+            left: 8%;
+            top: 20%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            position: absolute;
+            /* border: 1px solid white; */
+        }
+
+        .headingbox {
+            height: auto;
+            width: 65%;
+            /* border: 1px solid white; */
+        }
+
+        .text7 {
+            font-family: 'Jost', sans-serif;
+            font-size: 60px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .headingbox2 {
+            height: auto;
+            width: 400px;
+            /* border: 1px solid white; */
+        }
+
+        .para2 {
+            font-family: 'Jost', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 28px;
+            color: white;
+        }
+
+        .button1 {
+            height: 8vh;
+            width: 38%;
+            font-family: 'Jost', sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            color: black;
+            background-color: #b7ff00;
+            transition: all 1s;
+            border: none;
+        }
+
+        .button1:hover {
+            background-color: black;
+            color: #b7ff00;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width:997px) {
+            .textbox2 {
+                left: 2%;
+                top: 10%;
+            }
+
+            .text7 {
+                font-size: 40px;
+            }
+
+            .para2 {
+                font-size: 12px;
+            }
+
+        }
+
+        @media screen and (max-width:699px) {
+            .headingbox {
+                width: auto;
+            }
+
+            .textbox2 {
+                width: auto;
+                left: 2%;
+                /* top: 10%; */
+            }
+
+            .text7 {
+                font-size: 30px;
+            }
+
+            .para2 {
+                font-size: 12px;
+            }
+
+        }
+
+        @media screen and (max-width:513px) {
+
+            .textbox2 {
+                width: 200px;
+                left: 2%;
+                top: 0;
+            }
+
+            .text7 {
+                font-size: 15px;
+            }
+
+            .para2 {
+                font-size: 12px;
+            }
+
+            .button1 {
+                height: auto;
+                width: max-content;
+            }
+
+            .headingbox2 {
+                width: 300px;
+            }
+
+        }
+
+        .parent2 {
+            height: auto;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-top: 25px;
+            gap: 25px;
+            /* border: 1px solid; */
+        }
+
+        .childbox1 {
+            height: auto;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            /* border: 1px solid; */
+        }
+
+        .smallbox15 {
+            height: auto;
+            width: 80%;
+            /* border: 1px solid; */
+        }
+
+        .text8 {
+            text-align: center;
+            font-family: 'Jost', sans-serif;
+            font-size: 28px;
+            font-weight: bold;
+            line-height: 40px;
+        }
+
+        .smallbox16 {
+            height: auto;
+            width: auto;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            /* border: 1px solid; */
+        }
+
+        .text9 {
+            font-family: 'Jost', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            color: gray;
+            cursor: pointer;
+        }
+
+        .right {
+            color: gray;
+
+        }
+
+        .childbox2 {
+            height: 20vh;
+            width: 100%;
+            overflow: hidden;
+            /* border: 1px solid red; */
+        }
+
+        .slidebox2 {
+            height: 20vh;
+            width: 200%;
+            /* border: 3px solid lime; */
+            display: flex;
+            align-items: center;
+
+
+        }
+
+        .smallchild {
+            height: 15vh;
+            width: 10%;
+            margin-left: 0.2%;
+            overflow: hidden;
+            /* border: 1px solid blue; */
+        }
+
+        .img9 {
+            height: 100%;
+            width: 100%;
+            transform: scale(1);
+            transition: all 1.0s;
+        }
+
+        .smallchild:hover .img9 {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+
+        @media screen and (max-width:1071px) {
+            .slidebox2 {
+                height: 20vh;
+                width: calc(200% - 8px);
+                /* border: 3px solid lime; */
+                animation-name: smallchild;
+                gap: 8px;
+                animation-duration: 6s;
+
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+
+
+                display: flex;
+                align-items: center;
+
+            }
+
+            .smallchild {
+                height: 15vh;
+                width: 8.3%;
+                /* margin-left: 5%; */
+
+                /* border: 1px solid blue; */
+            }
+
+            @keyframes smallchild {
+                0% {
+                    margin-left: 0%;
+                }
+
+                8.33% {
+                    margin-left: 0;
+                }
+
+                16.6% {
+                    margin-left: -16.66%;
+                }
+
+                24.9% {
+                    margin-left: -16.66%;
+                }
+
+                33.2% {
+                    margin-left: -33.33%;
+                }
+
+                41.5% {
+                    margin-left: -33.33%;
+                }
+
+                49.8% {
+                    margin-left: -50%;
+                }
+
+                58.1% {
+                    margin-left: -50%;
+                }
+
+                66.4% {
+                    margin-left: -66.66%;
+                }
+
+                74.7% {
+                    margin-left: -66.66%;
+                }
+
+                83% {
+                    margin-left: -83%;
+                }
+
+                91.3% {
+                    margin-left: -83%;
+                }
+
+                99.6% {
+                    margin-left: -100%;
+                }
+
+                100% {
+                    margin-left: -100%;
+                }
+
+
+            }
+
+            .childbox1 {
+                width: 100%;
+            }
+
+            .smallbox15 {
+                width: 100%;
+            }
+
+        }
+
+
+        @media screen and (max-width:642px) {
+            .slidebox2 {
+                width: 1200%;
+                animation-duration: 10s;
+                animation-name: smallchild;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+            }
+
+            @keyframes smallchild {
+                0% {
+                    margin-left: 0%;
+                }
+
+                10% {
+                    margin-left: 0%;
+                }
+
+                20% {
+                    margin-left: -100%;
+                }
+
+                30% {
+                    margin-left: -100%;
+                }
+
+                40% {
+                    margin-left: -200%;
+                }
+
+                50% {
+                    margin-left: -200%;
+                }
+
+                60% {
+                    margin-left: -300%;
+                }
+
+                70% {
+                    margin-left: -300%;
+                }
+
+                80% {
+                    margin-left: -400%;
+                }
+
+                90% {
+                    margin-left: -400%;
+                }
+
+                100% {
+                    margin-left: -500%;
+                }
+
+
+            }
+
+            .smallchild {
+                width: 100%;
+                /* margin-left: 2px; */
+            }
+        }
+
+        .parent3 {
+            height: auto;
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding-top: 28px;
+            /* border: 1px solid; */
+        }
+
+        .childbox3 {
+            height: 70vh;
+            width: 23.5%;
+            position: relative;
+            overflow: hidden;
+            /* border: 1px solid; */
+        }
+
+
+
+        .img10 {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            transform: scale(1);
+            transition: all 1.0s;
+        }
+
+        .childbox3:hover .img10 {
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+
+        .smallchild2 {
+            height: 15vh;
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            left: 5%;
+            top: 250px;
+            position: absolute;
+            /* border: 1px solid white; */
+        }
+
+        .text10 {
+
+            text-align: center;
+            font-family: 'Jost', sans-serif;
+            font-size: 40px;
+            font-weight: bolder;
+            color: white;
+            cursor: pointer;
+        }
+
+        .line {
+            height: 3px;
+            width: 28%;
+            background-color: #b7ff00;
+
+        }
+
+        .smallchild3 {
+            height: 8vh;
+            width: 90%;
+            left: 5%;
+            top: 360px;
+            position: absolute;
+            /* border: 1px solid white; */
+        }
+
+        .para3 {
+            text-align: center;
+            font-family: 'Jost', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 28px;
+            color: white;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width:1016px) {
+            .parent3 {
+                flex-wrap: wrap;
+
+            }
+
+            .childbox3 {
+                width: 50%;
+            }
+
+            .smallchild3 {
+                top: 330px;
+            }
+        }
+
+        @media screen and (max-width:754px) {
+            .parent3 {
+                flex-direction: column;
+                flex-wrap: wrap;
+                padding-top: 20px;
+                gap: 20px;
+            }
+
+            .childbox3 {
+                width: 60%;
+            }
+
+            .smallchild3 {
+                top: 330px;
+            }
+        }
+
+        @media screen and (max-width:516px) {
+            .childbox3 {
+                width: 90%;
+            }
+        }
+
+        .parent4 {
+            height: 30vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            padding: 1px;
+            /* border: 1px solid; */
+        }
+
+        .childbox4 {
+            height: auto;
+            width: auto;
+            /* border: 1px solid; */
+        }
+
+        .text11 {
+            text-align: center;
+            font-family: 'Jost', sans-serif;
+            font-size: 28px;
+            font-weight: bolder;
+
+        }
+
+        .childbox5 {
+            height: 8vh;
+            width: 70%;
+            position: relative;
+            display: flex;
+            /* border: 1px solid; */
+        }
+
+        #inp2 {
+            width: 99%;
+            text-align: center;
+            font-family: 'Jost', sans-serif;
+            font-size: 22px;
+            font-weight: 400;
+            outline: none;
+            background-color: #b7ff00;
+            border: none;
+        }
+
+        #inp2::placeholder {
+            color: black;
+        }
+
+        #inp2:focus::placeholder {
+            visibility: hidden;
+        }
+
+        .iconbox {
+            height: 7.9vh;
+            width: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #b7ff00;
+            transition: 1s;
+            /* border: 1px solid; */
+        }
+
+        .iconbox:hover {
+            background-color: #729c07;
+            cursor: pointer;
+        }
+
+        .glass2 {
+            font-size: 30px;
+        }
+
+        .parent5 {
+            height: auto;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* border: 1px solid; */
+        }
+
+        .childbox6 {
+            height: 85vh;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            /* border: 1px solid; */
+        }
+
+        .child {
+            height: 40vh;
+            width: 95%;
+            position: relative;
+            overflow: hidden;
+            /* border: 1px solid; */
+        }
+
+        .img11 {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            transform: scale(1);
+            transition: all 1.0s;
+        }
+
+        .textbox3 {
+            height: auto;
+            width: max-content;
+            left: 10%;
+            top: 50px;
+            position: absolute;
+            /* border: 1px solid white; */
+        }
+
+        .textbox5 {
+            height: auto;
+            width: max-content;
+            left: 10%;
+            top: 300px;
+            position: absolute;
+            /* border: 1px solid white; */
+        }
+
+        .text12 {
+            font-family: 'Jost', sans-serif;
+            font-size: 30px;
+            font-weight: bolder;
+            color: white;
+        }
+
+        .textbox4 {
+            height: auto;
+            width: auto;
+            left: 10%;
+            top: 100px;
+            position: absolute;
+            /* border: 1px solid white; */
+        }
+
+        .textbox6 {
+            height: auto;
+            width: 55%;
+            left: 10%;
+            top: 340px;
+            position: absolute;
+            /* border: 1px solid white; */
+        }
+
+        .para4 {
+            font-family: 'Jost', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 28px;
+            color: white;
+        }
+
+        .button3 {
+            height: 7vh;
+            width: 25%;
+            position: absolute;
+            left: 10%;
+            top: 158px;
+            font-family: 'Jost', sans-serif;
+            font-size: 16px;
+            font-weight: bolder;
+            background-color: white;
+            transition: 1s;
+            color: black;
+            border: none;
+
+        }
+
+
+        .button3:hover {
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
+
+        .child:hover .img11 {
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+
+        .childbox7 {
+            height: 82vh;
+            width: 50%;
+            position: relative;
+            overflow: hidden;
+            /* border: 1px solid; */
+        }
+
+        .img12 {
+            height: 100%;
+            width: 100%;
+            transform: scale(1);
+            transition: all 1.0s;
+
+        }
+
+        .childbox7:hover .img12 {
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+
+        .button4 {
+            height: 8vh;
+            width: 25%;
+            position: absolute;
+            left: 10%;
+            top: 400px;
+            font-family: 'Jost', sans-serif;
+            font-size: 16px;
+            font-weight: bolder;
+            background-color: white;
+            transition: 1s;
+            color: black;
+            border: none;
+
+        }
+
+        .button4:hover {
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width:763px) {
+            .parent5 {
+                flex-direction: column;
+                flex-wrap: wrap;
+            }
+
+            .childbox6 {
+                width: 100%;
+            }
+
+            .childbox7 {
+                height: 80%;
+                width: 100%;
+            }
+
+            .textbox5 {
+                top: 150px;
+            }
+
+            .textbox6 {
+                top: 180px;
+            }
+
+            .button4 {
+                top: 260px;
+            }
+
+        }
+
+        @media screen and (max-width:376px) {
+            .button3 {
+                width: max-content;
+            }
+
+            .button4 {
+                width: max-content;
+            }
+        }
+
+        .parent6 {
+            height: auto;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 25px;
+            /* border: 1px solid; */
+        }
+
+        .childbox8 {
+            height: 68vh;
+            width: 18%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* align-items: center; */
+            background-image: url(https://new-ella-demo.myshopify.com/cdn/shop/files/home-gym-product-block.jpg?v=1655205281);
+            background-position: center;
+            background-size: cover;
+            /* border: 1px solid; */
+
+        }
+
+        .smallbox17 {
+            height: auto;
+            width: 199px;
+            margin-left: 10%;
+            margin-top: 150px;
+            /* border: 1px solid white; */
+        }
+
+        .text14 {
+            font-family: 'Jost', sans-serif;
+            font-size: 40px;
+            font-weight: bolder;
+            color: white;
+        }
+
+        .smallbox18 {
+            height: 6vh;
+            width: 40%;
+            margin-left: 10%;
+            margin-top: 5px;
+            position: relative;
+            /* border: 1px solid white; */
+        }
+
+        .text15 {
+            font-family: 'Jost', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            color: white;
+        }
+
+        .line3 {
+            height: 1px;
+            width: 60px;
+            left: 0;
+            top: 20px;
+            position: absolute;
+            background-color: white;
+        }
+
+        .playbox {
+            height: 120px;
+            width: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 10%;
+            margin-top: -230px;
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.596);
+        }
+
+        .play {
+            font-size: 60px;
+            color: white;
+            cursor: pointer;
+        }
+
+
+
+        .childbox9 {
+            height: 68vh;
+            width: 80%;
+            overflow: hidden;
+            /* border: 1px solid red; */
+        }
+
+        .slidbox3 {
+            height: 100%;
+            width: 200%;
+            /* border: 3px solid lime; */
+            animation-name: smallslide;
+            animation-duration: 6s;
+            animation-delay: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        @keyframes smallslide {
+            0% {
+                margin-left: 0;
+            }
+
+            12.5% {
+                margin-left: 0;
+            }
+
+            25% {
+                margin-left: -25%;
+            }
+
+            37.5% {
+                margin-left: -25%;
+            }
+
+            50% {
+                margin-left: -50%;
+            }
+
+            62% {
+                margin-left: -50%;
+            }
+
+            74% {
+                margin-left: -75%;
+
+            }
+
+            86% {
+                margin-left: -75%;
+
+            }
+
+            100% {
+                margin-left: -100%;
+            }
+        }
+
+        .smallslide {
+            height: 99%;
+            width: 12.5%;
+            margin-left: 20px;
+
+        }
+
+        .picbox4 {
+            height: 55vh;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            /* border: 1px solid blue; */
+            /* background-color: black; */
+        }
+
+        .img18 {
+            height: 100%;
+            width: 100%;
+        }
+
+        .img19 {
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            position: absolute;
+            transition: all 0.5s;
+
+        }
+
+        .picbox4:hover .img19 {
+            opacity: 1;
+            cursor: pointer;
+
+        }
+
+        .smalliconbox1 {
+            height: 30px;
+            width: 30px;
+            left: -8%;
+            top: 10px;
+            opacity: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            transform: translateX(0);
+            transition: all 0.5s;
+            border-radius: 100px;
+            background-color: white;
+            /* border: 1px solid blue; */
+        }
+
+        .smallslide:hover .smalliconbox1 {
+            opacity: 1;
+            transform: translateX(28px);
+        }
+
+        .smalliconbox2 {
+            height: 30px;
+            width: 30px;
+            left: -8%;
+            top: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transform: translateX(0);
+            transition: all 0.5s;
+            position: absolute;
+            border-radius: 100px;
+            background-color: white;
+            /* border: 1px solid blue; */
+        }
+
+        .smallslide:hover .smalliconbox2 {
+            opacity: 1;
+            transform: translateX(28px);
+        }
+
+        .button7 {
+            height: 9vh;
+            width: 100%;
+            left: 0;
+            top: 356px;
+            font-family: 'Jost', sans-serif;
+            font-size: 16px;
+            font-weight: bolder;
+            position: absolute;
+            opacity: 0;
+            transform: translateY(0);
+            transition: all 0.5s;
+            background-color: #b7ff00;
+            color: black;
+            border: none;
+
+        }
+
+        .button7:hover {
+            background-color: black;
+            color: #b7ff00;
+            cursor: pointer;
+        }
+
+        .smallslide:hover .button7 {
+            opacity: 1;
+            transform: translateY(-56px);
+
+        }
+
+        .textbox7 {
+            height: 13vh;
+            width: 100%;
+            /* border: 1px solid red; */
+        }
+
+        .minibox13 {
+            height: 4vh;
+            width: 100%;
+            position: relative;
+            /* border: 1px solid white; */
+        }
+
+        .texth1 {
+            font-family: 'Jost', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            color: black;
+            cursor: pointer;
+        }
+
+        .line2 {
+            height: 1px;
+            width: 222px;
+            left: 0;
+            top: 19px;
+            visibility: hidden;
+            position: absolute;
+            background-color: black;
+        }
+
+        .minibox13:hover .line2 {
+            visibility: visible;
+            cursor: pointer;
+        }
+
+        .star {
+            font-size: 8px;
+            gap: 5px;
+            color: gray;
+        }
+
+        .text13 {
+            font-family: 'Jost', sans-serif;
+            font-size: 16px;
+            font-weight: bolder;
+            color: black;
+        }
+
+        @media screen and (max-width:1071px) {
+            .texth1 {
+                font-size: 10px;
+            }
+
+            .childbox8 {
+                width: 30%;
+            }
+
+            .smallbox17 {
+                margin-left: 20%;
+                margin-top: -2px;
+            }
+
+            .smallbox18 {
+                margin-left: 20%;
+            }
+
+            .playbox {
+                margin-left: 20%;
+            }
+        }
+
+        @media screen and (max-width:937px) {
+            .parent6 {
+                /* width: 100%; */
+                flex-direction: column;
+                flex-wrap: wrap;
+            }
+
+            .childbox8 {
+                width: 50%;
+            }
+
+
+
+            .smallbox17 {
+                margin-left: 10%;
+                margin-top: 150px;
+            }
+
+            .smallbox18 {
+                margin-left: 10%;
+                margin-top: -15px;
+            }
+
+            .playbox {
+                margin-left: 20%;
+            }
+        }
+
+        @media screen and (max-width:483px) {
+            .childbox9 {
+                width: 80%;
+
+            }
+
+            .childbox8 {
+                width: 100%;
+            }
+
+            .slidbox3 {
+                width: 800%;
+                animation-name: smallslide;
+                animation-duration: 10s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+
+
+            }
+
+
+            @keyframes smallslide {
+                0% {
+                    margin-left: 0;
+                }
+
+                8% {
+                    margin-left: 0%;
+                }
+
+                16.5% {
+                    margin-left: -100%;
+                }
+
+                24.5% {
+                    margin-left: -100%;
+                }
+
+                33% {
+                    margin-left: -200%;
+                }
+
+                41% {
+                    margin-left: -200%;
+                }
+
+                49.5% {
+                    margin-left: -300%;
+                }
+
+                57.5% {
+                    margin-left: -300%;
+                }
+
+                66% {
+                    margin-left: -400%;
+                }
+
+                74% {
+                    margin-left: -400%;
+                }
+
+                82.5% {
+                    margin-left: -500%;
+                }
+
+                90.5% {
+                    margin-left: -500%;
+                }
+
+                100% {
+                    margin-left: -600%;
+                }
+
+
+
+
+            }
+        }
+
+        .parent7 {
+            height: auto;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            padding-top: 100px;
+            /* border: 1px solid; */
+        }
+
+        .childbox10 {
+            height: auto;
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            /* border: 1px solid; */
+        }
+
+        .para5 {
+            text-align: center;
+            font-family: 'Jost', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 28px;
+        }
+
+        .textbox10 {
+            height: auto;
+            width: 50%;
+            /* border: 1px solid; */
+        }
+
+        .heading {
+            text-align: center;
+            font-family: 'Jost', sans-serif;
+            font-size: 20px;
+            font-weight: bolder;
+            color: black;
+        }
+
+        .childbox11 {
+            height: auto;
+            width: 60%;
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 25px;
+            /* border: 1px solid; */
+        }
+
+        .minibox14 {
+            height: auto;
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            /* border: 1px solid; */
+        }
+
+        .iconbox2 {
+            height: 8vh;
+            width: 30%;
+            /* background-color: palevioletred; */
+        }
+
+        .img20 {
+            height: 100%;
+            width: 100%;
+        }
+
+        .iconbox3 {
+            height: auto;
+            width: max-content;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* border: 1px solid blue; */
+        }
+
+        .text16 {
+            text-align: center;
+            font-family: 'Jost', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        .iconbox4 {
+            height: auto;
+            width: max-content;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            /* border: 1px solid blue; */
+
+        }
+
+        .line4 {
+            height: 1px;
+            width: 90%;
+            left: 6%;
+            top: 20px;
+            position: absolute;
+            background-color: black;
+        }
+
+        @media screen and (max-width:753px) {
+            .childbox11 {
+                width: 50%;
+                flex-wrap: wrap;
+                gap: 10px;
+
+            }
+
+            .minibox14 {
+                width: max-content;
+            }
+        }
+
+        .parent8 {
+            height: auto;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 80px;
+            background-color: #f2f4f4;
+            /* border: 1px solid; */
+        }
+
+        .childbox12 {
+            height: auto;
+            width: auto;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            align-items: center;
+            /* border: 1px solid; */
+        }
+
+        .text17 {
+            font-family: 'Jost', sans-serif;
+            font-size: 28px;
+            font-weight: bolder;
+            color: black;
+        }
+
+        .insta {
+            font-size: 28px;
+        }
+
+        .childbox13 {
+            height: auto;
+            width: 98%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            /* border: 1px solid; */
+        }
+
+        .picbox5 {
+            height: 48vh;
+            width: 24%;
+            position: relative;
+            overflow: hidden;
+            /* border: 1px solid; */
+        }
+
+        .img21 {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            transform: scale(1);
+            transition: all 1.0s;
+        }
+
+        .picbox5:hover .img21 {
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+
+        .blackbox {
+            height: 48vh;
+            width: 100%;
+            left: 0;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            opacity: 0;
+            background-color: rgba(0, 0, 0, 0.363);
+        }
+
+        .centerbox {
+            height: 15vh;
+            width: 35%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* border: 1px solid; */
+
+        }
+
+        .plus {
+            font-size: 100px;
+            color: white;
+            transition: 1s;
+        }
+
+        .picbox5:hover .blackbox {
+            opacity: 1;
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+
+        .button8 {
+            height: 8vh;
+            width: 20%;
+            font-family: 'Jost', sans-serif;
+            font-size: 16px;
+            font-weight: bolder;
+            background-color: #b7ff00;
+            border: none;
+            transition: 1s;
+            margin-top: 20px;
+
+        }
+
+        .button8:hover {
+            background-color: black;
+            color: #b7ff00;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width:1007px) {
+            .childbox13 {
+                width: 120%;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+            .picbox5 {
+                width: 30%;
+            }
+
+        }
+
+        @media screen and (max-width:873px) {
+            .childbox13 {
+                width: 140%;
+                justify-content: center;
+            }
+
+            .picbox5 {
+                width: 40%;
+            }
+        }
+
+        @media screen and (max-width:629px) {
+            .picbox5 {
+                width: 80%;
+            }
+
+            .button8 {
+                width: 40%;
+            }
+        }
+
+        @media screen and (max-width:427px) {
+            .childbox13 {
+                width: 198%;
+
+            }
+
+            .picbox5 {
+                width: 100%;
+            }
+
+            .button8 {
+                width: 40%;
+            }
+        }
+
+        .parent9 {
+            height: auto;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            background-color: #232323;
+            padding-top: 50px;
+            /* border: 1px solid; */
+        }
+
+        .childbox14 {
+            height: auto;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            /* border: 1px solid; */
+        }
+
+        .headingbox3 {
+            height: auto;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* border: 1px solid; */
+        }
+
+        .text18 {
+            font-family: 'Jost', sans-serif;
+            font-size: 20px;
+            font-weight: bolder;
+            color: white;
+        }
+
+        .typebox {
+            height: auto;
+            width: 95%;
+            display: flex;
+            justify-content: space-between;
+            /* border: 1px solid; */
+        }
+
+        #inp3 {
+            height: 8vh;
+            width: 73%;
+            font-family: 'Jost', sans-serif;
+            font-size: 16px;
+            padding-left: 10px;
+            outline: none;
+        }
+
+        #inp3:focus::placeholder {
+            visibility: hidden;
+        }
+
+        .button9 {
+            height: 8vh;
+            width: 25%;
+            background-color: #b7ff00;
+            border: none;
+            font-family: 'Jost', sans-serif;
+            font-size: 16px;
+            font-weight: bolder;
+            transition: 1s;
+        }
+
+        .button9:hover {
+            background-color: black;
+            color: #b7ff00;
+            cursor: pointer;
+        }
+
+
+        .childbox15 {
+            height: auto;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            padding: 50px;
+            /* align-items: center; */
+            /* border: 1px solid; */
+        }
+
+        .lastbox {
+            height: auto;
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 50px;
+            /* border: 1px solid; */
+        }
+
+        .typebox2 {
+            height: 80px;
+            width: 180px;
+            /* border: 1px solid white; */
+
+
+        }
+
+        .img22 {
+            height: 100%;
+            width: 100%;
+        }
+
+        .typebox3 {
+            height: 60vh;
+            width: 20%;
+            /* border: 1px solid; */
+
+        }
+
+        .spn5 {
+            font-family: 'Jost', sans-serif;
+            font-size: 16px;
+            font-weight: bolder;
+            color: white;
+        }
+
+        .content3 {
+            height: auto;
+            width: max-content;
+            display: flex;
+            align-items: center;
+            /* margin-left: 10px; */
+            margin-top: 20px;
+            /* border: 1px solid; */
+            ;
+
+        }
+
+        .content3:hover {
+            border-bottom: 1px solid white;
+            cursor: pointer;
+        }
+
+        .list3 {
+            color: white;
+            position: relative;
+            font-family: 'Jost', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            display: block;
+        }
+
+
+        .text19 {
+            font-family: 'Jost', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            padding-top: 18px;
+            color: white;
+        }
+
+        .box10 {
+            height: 8vh;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 50px;
+            /* border: 1px solid; */
+
+        }
+
+        .circle3 {
+            height: 40px;
+            width: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100px;
+            /* border: 1px solid; */
+            transition: 1s;
+        }
+
+        .fa {
+            font-size: 20px;
+            color: white;
+        }
+
+        .circle3:hover {
+            border: 1px solid white;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width:1071px) {
+            .childbox15 {
+
+                flex-direction: column;
+                flex-wrap: wrap;
+                gap: 50px;
+
+            }
+
+            .typebox2 {
+                justify-self: center;
+                align-self: center;
+
+            }
+
+            .lastbox {
+                width: 100%;
+            }
+
+            .childbox14 {
+                width: 100%;
+            }
+
+
+
+
+        }
+
+        @media screen and (max-width:865px) {
+            .childbox15 {
+                width: 100%;
+                flex-direction: column;
+                flex-wrap: wrap;
+
+            }
+
+            .lastbox {
+                width: 100%;
+                flex-direction: row;
+                flex-wrap: wrap;
+                /* justify-self: end; */
+            }
+
+            .typebox3 {
+                width: 50%;
+            }
+
+
+
+        }
+
+        @media screen and (max-width:417px) {
+            .lastbox {
+                width: 100%;
+                flex-direction: column;
+                flex-wrap: wrap;
+                /* justify-self: end; */
+            }
+
+            .typebox3 {
+                width: 100%;
+            }
+        }
+
+        .parent10 {
+            height: auto;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #474747;
+            padding-top:50px ;
+            /* border: 1px solid; */
+        }
+
+        .lastchild {
+            height: auto;
+            width: 40%;
+           
+            /* border: 1px solid; */
+        }
+
+        .para6 {
+
+            font-family: 'Jost', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            color: white;
+
+        }
+
+        .lastchild2 {
+            height: auto;
+            width: 40%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            /* border: 1px solid; */
+        }
+
+        .lastbox2 {
+            height: 7vh;
+            width: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* border: 1px solid; */
+        }
+
+        .visa {
+            font-size: 40px;
+            color: white;
+        }
+
+        @media screen and (max-width:1071px) {
+
+            .lastchild2 {
+                width: 50%;
+                flex-wrap: wrap;
+            }
+        }
+
+        @media screen and (max-width:833px) {
+            .parent10 {
+                flex-direction: column;
+                flex-wrap: wrap;
+            }
+            .lastchild{
+                width: 100%;
+                
+            }
+            .lastchild2 {
+                width:100%;
+            }
+            .visa{
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mainslide">
+        <div class="slidebox">
+            <div class="slide ">
+                <div class="smallbox">
+                    <i class="fa-solid fa-bolt bolt"></i>
+                </div>
+                <div class="smallbox2">
+                    <p class="para">SPECIAL OFFER: ENJOY 3 MONTHS OF SHOPIFY FOR <span class="spn">$1/MONTH</span> </p>
+
+                </div>
+            </div>
+            <div class="slide">
+                <div class="smallbox">
+                    <i class="fa-solid fa-bolt bolt"></i>
+                </div>
+                <div class="smallbox2">
+                    <p class="para">SPECIAL OFFER: ENJOY 3 MONTHS OF SHOPIFY FOR <span class="spn">$1/MONTH</span> </p>
+
+                </div>
+            </div>
+            <div class="slide">
+                <div class="smallbox">
+                    <i class="fa-solid fa-bolt bolt"></i>
+                </div>
+                <div class="smallbox2">
+                    <p class="para">SPECIAL OFFER: ENJOY 3 MONTHS OF SHOPIFY FOR <span class="spn">$1/MONTH</span> </p>
+
+                </div>
+            </div>
+            <div class="slide">
+                <div class="smallbox">
+                    <i class="fa-solid fa-bolt bolt"></i>
+                </div>
+                <div class="smallbox2">
+                    <p class="para">SPECIAL OFFER: ENJOY 3 MONTHS OF SHOPIFY FOR <span class="spn">$1/MONTH</span> </p>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="mainbar1">
+        <div class="smallbox3">
+            <div class="minibox">
+                <h2 class="text">GYM</h2>
+            </div>
+            <div class="minibox2">
+                <h2 class="text">YOGA</h2>
+            </div>
+        </div>
+        <div class="smallbox4">
+            <h2 class="text2">COVID-19 SHIPPING DELAY NOTICE</h2>
+        </div>
+        <div class="smallbox5">
+            <div class="minibox2">
+                <div class="small">
+                    <i class="fa-solid fa-bag-shopping shop"></i>
+                </div>
+                <h2 class="text2">Shopping Cart</h2>
+                <div class="smallcircle">
+                    <h2 class="text2">0</h2>
+                </div>
+            </div>
+            <div class="minibox3">
+                <h2 class="text2">Sign In or Create an Account </h2>
+                <div class="minibox4">
+                    <i class="fa-solid fa-globe globe"></i>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="mainbar2">
+        <div class="logobox">
+            <img class="img1"
+                src="https://new-ella-demo.myshopify.com/cdn/shop/files/logo-gym_304d325a-23e8-4500-91ea-81ea21e0f906_90x.png?v=1655200073"
+                alt="">
+        </div>
+        <ul class="content">
+            <li class="list">THEME DEMO
+                <div class="box2">
+                    <div class="bigtext">
+                        <span class="spn2">Homepages</span>
+                        <ul class="content2">
+                            <li class="list2">Home 01 - Classic</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 02 - Trendy Style </li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 03 - In Vogue</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 04 - High Fashion </li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 05 - Surfing</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 06 - SuperMarket </li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 07 - Electronics</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 08 - Large Catalogs</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 09 - Pet Supplies </li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 10 - Jewelry</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 11 - Health & Beauty</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 12 - Men Fashion</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 13 - Winter Sport</li>
+                        </ul>
+                    </div>
+                    <div class="bigtext">
+                        <span class="spn2">Homepages</span>
+                        <ul class="content2">
+                            <li class="list2">Home 01 - Classic</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 02 - Trendy Style </li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 03 - In Vogue</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 04 - High Fashion </li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 05 - Surfing</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 06 - SuperMarket </li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 07 - Electronics</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 08 - Large Catalogs</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 09 - Pet Supplies </li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 10 - Jewelry</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 11 - Health & Beauty</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 12 - Men Fashion</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 13 - Winter Sport</li>
+                        </ul>
+                    </div>
+                    <div class="bigtext">
+                        <span class="spn2">Spotlights</span>
+                        <ul class="content2">
+                            <li class="list2">Home 01 - Classic</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 02 - Trendy Style </li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 03 - In Vogue</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 04 - High Fashion </li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 05 - Surfing</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 06 - SuperMarket </li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 07 - Electronics</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 08 - Large Catalogs</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 09 - Pet Supplies </li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 10 - Jewelry</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 11 - Health & Beauty</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 12 - Men Fashion</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 13 - Winter Sport</li>
+                        </ul>
+                    </div>
+                    <div class="bigtext">
+                        <span class="spn2">Main Features</span>
+                        <ul class="content2">
+                            <li class="list2">Home 01 - Classic</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 02 - Trendy Style </li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 03 - In Vogue</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 04 - High Fashion </li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 05 - Surfing</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 06 - SuperMarket </li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 07 - Electronics</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 08 - Large Catalogs</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 09 - Pet Supplies </li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 10 - Jewelry</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 11 - Health & Beauty</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 12 - Men Fashion</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 13 - Winter Sport</li>
+                        </ul>
+                    </div>
+                    <div class="bigtext">
+                        <span class="spn2">Main Features</span>
+                        <ul class="content2">
+                            <li class="list2">Home 01 - Classic</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 02 - Trendy Style </li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 03 - In Vogue</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 04 - High Fashion </li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 05 - Surfing</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 06 - SuperMarket </li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 07 - Electronics</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 08 - Large Catalogs</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 09 - Pet Supplies </li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 10 - Jewelry</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 11 - Health & Beauty</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 12 - Men Fashion</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 13 - Winter Sport</li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li class="list">SHOP
+                <div class="box3">
+                    <div class="bigtext">
+                        <span class="spn2">Collection List Pages</span>
+                        <ul class="content2">
+                            <li class="list2">Collection List 01</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Collection List 02</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Collection List 03</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Collection List 04</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Collection List 05</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Collection Detail 01 </li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Collection Detail 02</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 08 - Large Catalogs</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Collection Detail 03 (Coming Soon)</li>
+                        </ul>
+
+                    </div>
+                    <div class="bigtext">
+                        <span class="spn2">Collection List Pages</span>
+                        <ul class="content2">
+                            <li class="list2">Collection List 01</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Collection List 02</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Collection List 03</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Collection List 04</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Collection List 05</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Collection Detail 01 </li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Collection Detail 02</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 08 - Large Catalogs</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Collection Detail 03 (Coming Soon)</li>
+                        </ul>
+
+                    </div>
+                    <div class="bigtext">
+                        <span class="spn2">Main Features</span>
+                        <ul class="content2">
+                            <li class="list2">Collection List 01</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Collection List 02</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Collection List 03</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Collection List 04</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Collection List 05</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Collection Detail 01 </li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Collection Detail 02</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 08 - Large Catalogs</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Collection Detail 03 (Coming Soon)</li>
+                        </ul>
+
+                    </div>
+                    <div class="bigtext">
+                        <span class="spn2">Main Features</span>
+                        <ul class="content2">
+                            <li class="list2">Collection List 01</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Collection List 02</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Collection List 03</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Collection List 04</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Collection List 05</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Collection Detail 01 </li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Collection Detail 02</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 08 - Large Catalogs</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Collection Detail 03 (Coming Soon)</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </li>
+            <li class="list">PRODUCT
+                <div class="box3">
+                    <div class="bigtext">
+                        <span class="spn2">Product Pages</span>
+                        <ul class="content2">
+                            <li class="list2">Layout 01 - Default</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Layout 02 - Full Width</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Layout 03 - Grid View</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Layout 04 - Slider</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Layout 05 - Gallery</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Layout 06 - Left Thumb</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Layout 07 - Right Thumb</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 08 - Large Catalogs</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Layout 08 - Left Sidebar</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Layout 09 - Right Sidebar</li>
+                        </ul>
+
+                    </div>
+                    <div class="bigtext">
+                        <span class="spn2">Product Pages</span>
+                        <ul class="content2">
+                            <li class="list2">Layout 01 - Default</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Layout 02 - Full Width</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Layout 03 - Grid View</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Layout 04 - Slider</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Layout 05 - Gallery</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Layout 06 - Left Thumb</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Layout 07 - Right Thumb</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 08 - Large Catalogs</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Layout 08 - Left Sidebar</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Layout 09 - Right Sidebar</li>
+                        </ul>
+
+                    </div>
+                    <div class="bigtext">
+                        <span class="spn2">Product Pages</span>
+                        <ul class="content2">
+                            <li class="list2">Layout 01 - Default</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Layout 02 - Full Width</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Layout 03 - Grid View</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Layout 04 - Slider</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Layout 05 - Gallery</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Layout 06 - Left Thumb</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Layout 07 - Right Thumb</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 08 - Large Catalogs</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Layout 08 - Left Sidebar</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Layout 09 - Right Sidebar</li>
+                        </ul>
+
+                    </div>
+                    <div class="bigtext">
+                        <span class="spn2">Product Pages</span>
+                        <ul class="content2">
+                            <li class="list2">Layout 01 - Default</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Layout 02 - Full Width</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Layout 03 - Grid View</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Layout 04 - Slider</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Layout 05 - Gallery</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Layout 06 - Left Thumb</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Layout 07 - Right Thumb</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 08 - Large Catalogs</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Layout 08 - Left Sidebar</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Layout 09 - Right Sidebar</li>
+                        </ul>
+
+                    </div>
+                    <div class="bigtext">
+                        <span class="spn2">Product Pages</span>
+                        <ul class="content2">
+                            <li class="list2">Layout 01 - Default</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Layout 02 - Full Width</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Layout 03 - Grid View</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Layout 04 - Slider</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Layout 05 - Gallery</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Layout 06 - Left Thumb</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Layout 07 - Right Thumb</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Home 08 - Large Catalogs</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Layout 08 - Left Sidebar</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Layout 09 - Right Sidebar</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </li>
+            <li class="list">BLOG
+                <div class="box4">
+                    <div class="bigtext">
+
+                        <ul class="content2">
+                            <li class="list2">Blog Default</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Blog Simple</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Blog Full Width</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Blog Masonry</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Blog List</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Blog Post Default </li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Blog Post With Products</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </li>
+            <li class="list">PAGES
+                <div class="box5">
+                    <div class="bigtext">
+                        <ul class="content2">
+                            <li class="list2">RTL Layout </li>
+
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">About Us </li>
+                            <i id="right" class="fa-solid fa-chevron-right"></i>
+                            <div class="smallbox6">
+                                <ul class="content2">
+                                    <li class="list2">About Us 1</li>
+                                </ul>
+                                <ul class="content2">
+                                    <li class="list2">About Us 2</li>
+                                </ul>
+                            </div>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Brands</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Bulk Editor</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Contact Us</li>
+                            <i id="icon" class="fa-solid fa-chevron-right"></i>
+                            <div class="smallbox7">
+                                <ul class="content2">
+                                    <li class="list2">Contact Us 1</li>
+                                </ul>
+                                <ul class="content2">
+                                    <li class="list2">Contact Us 2</li>
+                                </ul>
+                            </div>
+
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Faqs</li>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Landing Pages</li>
+                            <i id="icon2" class="fa-solid fa-chevron-right"></i>
+                            <div class="smallbox8">
+                                <ul class="content2">
+                                    <li class="list2">Landing Pages 1</li>
+                                </ul>
+                                <ul class="content2">
+                                    <li class="list2">Landing Pages 2</li>
+                                </ul>
+                                <ul class="content2">
+                                    <li class="list2">Landing Pages 3</li>
+                                </ul>
+                            </div>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Lookbook</li>
+                            <i id="icon3" class="fa-solid fa-chevron-right"></i>
+                            <div class="smallbox9">
+                                <ul class="content2">
+                                    <li class="list2">Lookbook 1</li>
+                                </ul>
+                                <ul class="content2">
+                                    <li class="list2">Lookbook 2 (Coming Soon)</li>
+                                </ul>
+                                <ul class="content2">
+                                    <li class="list2">Lookbook 3 (Coming Soon)</li>
+                                </ul>
+                            </div>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Portfolio</li>
+                            <i id="icon4" class="fa-solid fa-chevron-right"></i>
+                            <div class="smallbox10">
+                                <ul class="content2">
+                                    <li class="list2">Portfolio 1</li>
+                                </ul>
+                                <ul class="content2">
+                                    <li class="list2">Portfolio 2</li>
+                                </ul>
+
+                            </div>
+                        </ul>
+                        <ul class="content2">
+                            <li class="list2">Wishlist
+                            </li>
+                            <i id="icon5" class="fa-solid fa-chevron-right"></i>
+                            <div class="smallbox11">
+                                <ul class="content2">
+                                    <li class="list2">Wishlist (List View)</li>
+                                </ul>
+                                <ul class="content2">
+                                    <li class="list2">Wishlist (Grid View)</li>
+                                </ul>
+
+                            </div>
+                        </ul>
+
+
+                    </div>
+                </div>
+            </li>
+            <li class="list">NEW IN
+                <div class="box6">
+                    <div class="bigtext2">
+                        <div class="bigbox">
+                            <span class="spn2">Lorem Dorus</span>
+                            <ul class="content2">
+                                <li class="list2">Dincidunteros </li>
+                            </ul>
+
+                            <ul class="content2">
+                                <li class="list2"> Loremous</li>
+                            </ul>
+                            <ul class="content2">
+                                <li class="list2"> Comodianos</li>
+                            </ul>
+                            <ul class="content2">
+                                <li class="list2"> Gravidas</li>
+                            </ul>
+                            <ul class="content2">
+                                <li class="list2"> Montemous</li>
+                            </ul>
+                        </div>
+                        <div class="bigbox">
+                            <span class="spn2">Cosmo Milano</span>
+                            <ul class="content2">
+                                <li class="list2">Dincidunteros </li>
+                            </ul>
+
+                            <ul class="content2">
+                                <li class="list2"> Loremous</li>
+                            </ul>
+                            <ul class="content2">
+                                <li class="list2"> Comodianos</li>
+                            </ul>
+                            <ul class="content2">
+                                <li class="list2"> Gravidas</li>
+                            </ul>
+                            <ul class="content2">
+                                <li class="list2"> Montemous</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bigtext2">
+                        <div class="bigbox">
+                            <span class="spn2">Milancelos Lanos</span>
+                            <ul class="content2">
+                                <li class="list2">Dincidunteros </li>
+                            </ul>
+
+                            <ul class="content2">
+                                <li class="list2"> Loremous</li>
+                            </ul>
+                            <ul class="content2">
+                                <li class="list2"> Comodianos</li>
+                            </ul>
+                            <ul class="content2">
+                                <li class="list2"> Gravidas</li>
+                            </ul>
+                            <ul class="content2">
+                                <li class="list2"> Montemous</li>
+                            </ul>
+                        </div>
+                        <div class="bigbox">
+                            <span class="spn2">Nor Loremirus</span>
+                            <ul class="content2">
+                                <li class="list2">Dincidunteros </li>
+                            </ul>
+
+                            <ul class="content2">
+                                <li class="list2"> Loremous</li>
+                            </ul>
+                            <ul class="content2">
+                                <li class="list2"> Comodianos</li>
+                            </ul>
+                            <ul class="content2">
+                                <li class="list2"> Gravidas</li>
+                            </ul>
+                            <ul class="content2">
+                                <li class="list2"> Montemous</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bigtext2">
+                        <div class="bigbox">
+                            <span class="spn2">Lynn Cosmopolis</span>
+                            <ul class="content2">
+                                <li class="list2">Dincidunteros </li>
+                            </ul>
+
+                            <ul class="content2">
+                                <li class="list2"> Loremous</li>
+                            </ul>
+                            <ul class="content2">
+                                <li class="list2"> Comodianos</li>
+                            </ul>
+                            <ul class="content2">
+                                <li class="list2"> Gravidas</li>
+                            </ul>
+                            <ul class="content2">
+                                <li class="list2"> Montemous</li>
+                            </ul>
+                        </div>
+                        <div class="bigbox">
+                            <span class="spn2">Nor Loremirus</span>
+                            <ul class="content2">
+                                <li class="list2">Dincidunteros </li>
+                            </ul>
+
+                            <ul class="content2">
+                                <li class="list2"> Loremous</li>
+                            </ul>
+                            <ul class="content2">
+                                <li class="list2"> Comodianos</li>
+                            </ul>
+                            <ul class="content2">
+                                <li class="list2"> Gravidas</li>
+                            </ul>
+                            <ul class="content2">
+                                <li class="list2"> Montemous</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bigtext2">
+                        <span class="spn2">Featured Products</span>
+                        <div class="imgbox">
+                            <img class="img2"
+                                src="https://new-ella-demo.myshopify.com/cdn/shop/products/product-new-5-a2_360x.webp?v=1659407409"
+                                alt="">
+
+
+                        </div>
+                        <div class="imgbox2">
+                            <div class="textbox">
+                                <h3 class="text5">TOMORROW®</h3>
+                            </div>
+                            <div class="textbox">
+                                <ul class="content2">
+                                    <li class="list2">(Product 12) Sample-</li>
+                                </ul>
+                            </div>
+                            <div class="textbox">
+
+                                <h3 class="text3">$780.00</h3>
+
+                            </div>
+
+                        </div>
+                        <div class="imgbox3">
+                            <div class="circle">
+                                <div class="smallcircle2"></div>
+                            </div>
+                            <div class="circle">
+                                <div class="smallcircle3"></div>
+                            </div>
+                            <div class="circle"></div>
+                            <div class="circle2"></div>
+                        </div>
+                        <div class="imgbox4">
+                            <h3 class="text3">SHOP NOW
+
+                            </h3>
+                        </div>
+
+                    </div>
+                    <div class="bigtext3">
+                        <img class="img4"
+                            src="https://new-ella-demo.myshopify.com/cdn/shop/files/menu-1jpg.jpg?v=1668668948" alt="">
+                    </div>
+                </div>
+
+
+            </li>
+
+
+
+
+
+
+
+
+
+
+
+
+            <li class="list">TREND
+                <div class="box6">
+                    <div class="bigtext2">
+                        <div class="bigbox">
+                            <span class="spn2">Lorem Dorus</span>
+                            <ul class="content2">
+                                <li class="list2">Dincidunteros </li>
+                            </ul>
+
+                            <ul class="content2">
+                                <li class="list2"> Loremous</li>
+                            </ul>
+                            <ul class="content2">
+                                <li class="list2"> Comodianos</li>
+                            </ul>
+                            <ul class="content2">
+                                <li class="list2"> Gravidas</li>
+                            </ul>
+                            <ul class="content2">
+                                <li class="list2"> Montemous</li>
+                            </ul>
+                        </div>
+                        <div class="bigbox">
+                            <span class="spn2">Cosmo Milano</span>
+                            <ul class="content2">
+                                <li class="list2">Dincidunteros </li>
+                            </ul>
+
+                            <ul class="content2">
+                                <li class="list2"> Loremous</li>
+                            </ul>
+                            <ul class="content2">
+                                <li class="list2"> Comodianos</li>
+                            </ul>
+                            <ul class="content2">
+                                <li class="list2"> Gravidas</li>
+                            </ul>
+                            <ul class="content2">
+                                <li class="list2"> Montemous</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bigtext2">
+                        <div class="bigbox">
+                            <span class="spn2">Milancelos Lanos</span>
+                            <ul class="content2">
+                                <li class="list2">Dincidunteros </li>
+                            </ul>
+
+                            <ul class="content2">
+                                <li class="list2"> Loremous</li>
+                            </ul>
+                            <ul class="content2">
+                                <li class="list2"> Comodianos</li>
+                            </ul>
+                            <ul class="content2">
+                                <li class="list2"> Gravidas</li>
+                            </ul>
+                            <ul class="content2">
+                                <li class="list2"> Montemous</li>
+                            </ul>
+                        </div>
+                        <div class="bigbox">
+                            <span class="spn2">Nor Loremirus</span>
+                            <ul class="content2">
+                                <li class="list2">Dincidunteros </li>
+                            </ul>
+
+                            <ul class="content2">
+                                <li class="list2"> Loremous</li>
+                            </ul>
+                            <ul class="content2">
+                                <li class="list2"> Comodianos</li>
+                            </ul>
+                            <ul class="content2">
+                                <li class="list2"> Gravidas</li>
+                            </ul>
+                            <ul class="content2">
+                                <li class="list2"> Montemous</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bigtext2">
+                        <div class="bigbox">
+                            <span class="spn2">Lynn Cosmopolis</span>
+                            <ul class="content2">
+                                <li class="list2">Dincidunteros </li>
+                            </ul>
+
+                            <ul class="content2">
+                                <li class="list2"> Loremous</li>
+                            </ul>
+                            <ul class="content2">
+                                <li class="list2"> Comodianos</li>
+                            </ul>
+                            <ul class="content2">
+                                <li class="list2"> Gravidas</li>
+                            </ul>
+                            <ul class="content2">
+                                <li class="list2"> Montemous</li>
+                            </ul>
+                        </div>
+                        <div class="bigbox">
+                            <span class="spn2">Nor Loremirus</span>
+                            <ul class="content2">
+                                <li class="list2">Dincidunteros </li>
+                            </ul>
+
+                            <ul class="content2">
+                                <li class="list2"> Loremous</li>
+                            </ul>
+                            <ul class="content2">
+                                <li class="list2"> Comodianos</li>
+                            </ul>
+                            <ul class="content2">
+                                <li class="list2"> Gravidas</li>
+                            </ul>
+                            <ul class="content2">
+                                <li class="list2"> Montemous</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bigtext2s">
+                        <div class="bigbox2">
+                            <img class="img5"
+                                src="https://new-ella-demo.myshopify.com/cdn/shop/files/menu-2_4a3beca3-44ed-40e0-8bf2-8d0d37816bdc.jpg?v=1668669029"
+                                alt="">
+                        </div>
+                        <div class="bigbox2">
+                            <img class="img5"
+                                src="https://new-ella-demo.myshopify.com/cdn/shop/files/menu-3_937a09a7-bd4b-47c2-a73a-abe463bb20ab.jpg?v=1668669041"
+                                alt="">
+                        </div>
+
+                    </div>
+                </div>
+            </li>
+            <li class="list">COLLECTIONS
+                <div class="box8">
+                    <div class="bigbox4">
+
+                        <div class="bigbox">
+                            <span class="spn2">What’s New</span>
+                            <span class="spn2">Best Selling</span>
+                            <span class="spn2">Top Rated</span>
+                            <span class="spn2">Most Popular</span>
+                            <span class="spn2">Editor’s Picks</span>
+                            <span class="spn2">Editor’s Picks</span>
+                            <span class="spn3">SALE</span>
+
+                        </div>
+                        <div class="bigbox">
+                            <span class="spn2">Nor Loremirus</span>
+                            <ul class="content2">
+                                <li class="list2">Dincidunteros </li>
+                            </ul>
+
+                            <ul class="content2">
+                                <li class="list2"> Loremous</li>
+                            </ul>
+                            <ul class="content2">
+                                <li class="list2"> Comodianos</li>
+                            </ul>
+                            <ul class="content2">
+                                <li class="list2"> Gravidas</li>
+                            </ul>
+                            <ul class="content2">
+                                <li class="list2"> Montemous</li>
+                            </ul>
+                        </div>
+                        <div class="bigbox">
+                            <span class="spn2">Nor Loremirus</span>
+                            <ul class="content2">
+                                <li class="list2">Dincidunteros </li>
+                            </ul>
+
+                            <ul class="content2">
+                                <li class="list2"> Loremous</li>
+                            </ul>
+                            <ul class="content2">
+                                <li class="list2"> Comodianos</li>
+                            </ul>
+                            <ul class="content2">
+                                <li class="list2"> Gravidas</li>
+                            </ul>
+                            <ul class="content2">
+                                <li class="list2"> Montemous</li>
+                            </ul>
+                        </div>
+                        <div class="bigbox">
+                            <span class="spn2">Nor Loremirus</span>
+                            <ul class="content2">
+                                <li class="list2">Dincidunteros </li>
+                            </ul>
+
+                            <ul class="content2">
+                                <li class="list2"> Loremous</li>
+                            </ul>
+                            <ul class="content2">
+                                <li class="list2"> Comodianos</li>
+                            </ul>
+                            <ul class="content2">
+                                <li class="list2"> Gravidas</li>
+                            </ul>
+                            <ul class="content2">
+                                <li class="list2"> Montemous</li>
+                            </ul>
+                        </div>
+                        <div class="bigbox">
+                            <span class="spn2">Nor Loremirus</span>
+                            <ul class="content2">
+                                <li class="list2">Dincidunteros </li>
+                            </ul>
+
+                            <ul class="content2">
+                                <li class="list2"> Loremous</li>
+                            </ul>
+                            <ul class="content2">
+                                <li class="list2"> Comodianos</li>
+                            </ul>
+                            <ul class="content2">
+                                <li class="list2"> Gravidas</li>
+                            </ul>
+                            <ul class="content2">
+                                <li class="list2"> Montemous</li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+                    <div class="bigbox4">
+                        <div class="picbox">
+                            <img class="img6"
+                                src="https://new-ella-demo.myshopify.com/cdn/shop/files/home-gym-mega-menu-1.jpg?v=1655198490"
+                                alt="">
+                        </div>
+                        <div class="picbox2">
+                            <img class="img6"
+                                src="https://new-ella-demo.myshopify.com/cdn/shop/files/home-gym-mega-menu-2.jpg?v=1655198510"
+                                alt="">
+                        </div>
+                        <div class="picbox3">
+                            <div class="smallbar">
+                                <span class="spn2">All Brands A-Z</span>
+                            </div>
+                            <div class="smallbar2">
+                                <span class="spn4">A</span>
+                                <span class="spn4">B</span>
+                                <span class="spn4">C</span>
+                                <span class="spn4">D</span>
+                                <span class="spn4">E</span>
+                                <span class="spn4">F</span>
+                                <span class="spn4">G</span>
+                                <span class="spn4">H</span>
+                                <span class="spn4">I</span>
+                                <span class="spn4">J</span>
+                                <span class="spn4">K</span>
+                                <span class="spn4">M</span>
+                                <span class="spn4">N</span>
+                                <span class="spn4">O</span>
+                                <span class="spn4">P</span>
+                                <span class="spn4">Q</span>
+                                <span class="spn4">R</span>
+                                <span class="spn4">T</span>
+                                <span class="spn4">U</span>
+                                <span class="spn4">V</span>
+                                <span class="spn4">W</span>
+                                <span class="spn4">X</span>
+                                <span class="spn4">Y</span>
+                                <span class="spn4">Z</span>
+                            </div>
+                            <ul class="content2">
+                                <li class="list2">See All brands</li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="list">BUY ELLA
+                <div class="ellabox">
+                    <ul class="content2">
+                        <li class="list2"> Gravidas</li>
+                    </ul>
+                    <ul class="content2">
+                        <li class="list2"> Montemous</li>
+                    </ul>
+                    <ul class="content2">
+                        <li class="list2"> Montemous</li>
+                    </ul>
+                </div>
+            </li>
+
+        </ul>
+        <div class="box1">
+            <div class="minibox11">
+                <i class="fa-solid fa-magnifying-glass glass"></i>
+            </div>
+            <input placeholder="Search the store" name="" id="inp">
+        </div>
+    </div>
+    <div class="mainbar3">
+        <div class="smallbox12">
+            <div class="minibox12">
+                <i class="fa-solid fa-bars bars"></i>
+            </div>
+            <div class="minibox12">
+                <i class="fa-solid fa-magnifying-glass bars"></i>
+            </div>
+        </div>
+        <div class="smallbox13">
+            <img class="img7"
+                src="https://new-ella-demo.myshopify.com/cdn/shop/files/logo-gym-mb_small.png?v=1655200083" alt="">
+        </div>
+        <div class="smallbox14">
+            <div class="minibox12">
+                <i class="fa-solid fa-user bars"></i>
+            </div>
+            <div class="minibox12">
+                <i class="fa-solid fa-bag-shopping bars"></i>
+            </div>
+        </div>
+    </div>
+    <div class="longtextbar">
+        <div class="textbox">
+            <h1 class="text6">SALE UP TO 70% OFF ON SELECTED ITEMS*</h1>
+        </div>
+    </div>
+    <div class="parent1">
+        <div class="bigpicbox">
+            <div class="textbox2">
+                <div class="headingbox">
+                    <h1 class="text7">
+                        SHAPE
+                        YOUR BODY
+                    </h1>
+                </div>
+                <div class="headingbox2">
+                    <p class="para2">
+                        Quisquemos sodales suscipit tortor ditaemcos
+                        condimentum de cosmo lacus.
+                    </p>
+                </div>
+                <button class="button1">SHOP NOW</button>
+            </div>
+            <img class="img8"
+                src="https://new-ella-demo.myshopify.com/cdn/shop/files/banner-1.jpg?v=1655194043&width=1370" alt="">
+        </div>
+    </div>
+    <div class="parent2">
+        <div class="childbox1">
+            <div class="smallbox15">
+                <h2 class="text8">More Than Your Best Workout Clothing.
+                    Unlock The Motivator In You.</h2>
+            </div>
+            <div class="smallbox16">
+                <h3 class="text9">LEARN MORE</h3>
+                <i class="fa-solid fa-angle-right right"></i>
+            </div>
+        </div>
+        <div class="childbox2">
+            <div class="slidebox2">
+                <div class="smallchild">
+                    <img class="img9"
+                        src="https://new-ella-demo.myshopify.com/cdn/shop/files/gym-fitness_270x.jpg?v=1655265355"
+                        alt="">
+                </div>
+                <div class="smallchild">
+                    <img class="img9"
+                        src="https://new-ella-demo.myshopify.com/cdn/shop/files/bear-gym_270x.jpg?v=1655265366" alt="">
+                </div>
+                <div class="smallchild">
+                    <img class="img9"
+                        src="https://new-ella-demo.myshopify.com/cdn/shop/files/power-man_270x.jpg?v=1655265384" alt="">
+                </div>
+                <div class="smallchild">
+                    <img class="img9"
+                        src="https://new-ella-demo.myshopify.com/cdn/shop/files/spartacus_270x.jpg?v=1655265398" alt="">
+                </div>
+                <div class="smallchild">
+                    <img class="img9"
+                        src="https://new-ella-demo.myshopify.com/cdn/shop/files/fitness_270x.jpg?v=1655265421" alt="">
+                </div>
+                <div class="smallchild">
+                    <img class="img9"
+                        src="https://new-ella-demo.myshopify.com/cdn/shop/files/power-fitness_270x.jpg?v=1655265434"
+                        alt="">
+                </div>
+                <div class="smallchild">
+                    <img class="img9"
+                        src="https://new-ella-demo.myshopify.com/cdn/shop/files/gym-fitness_270x.jpg?v=1655265355"
+                        alt="">
+                </div>
+                <div class="smallchild">
+                    <img class="img9"
+                        src="https://new-ella-demo.myshopify.com/cdn/shop/files/bear-gym_270x.jpg?v=1655265366" alt="">
+                </div>
+                <div class="smallchild">
+                    <img class="img9"
+                        src="https://new-ella-demo.myshopify.com/cdn/shop/files/power-man_270x.jpg?v=1655265384" alt="">
+                </div>
+                <div class="smallchild">
+                    <img class="img9"
+                        src="https://new-ella-demo.myshopify.com/cdn/shop/files/spartacus_270x.jpg?v=1655265398" alt="">
+                </div>
+                <div class="smallchild">
+                    <img class="img9"
+                        src="https://new-ella-demo.myshopify.com/cdn/shop/files/fitness_270x.jpg?v=1655265421" alt="">
+                </div>
+                <div class="smallchild">
+                    <img class="img9"
+                        src="https://new-ella-demo.myshopify.com/cdn/shop/files/power-fitness_270x.jpg?v=1655265434"
+                        alt="">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="parent3">
+        <div class="childbox3">
+            <img class="img10" src="https://new-ella-demo.myshopify.com/cdn/shop/files/girl-ball_430x.jpg?v=1655172867"
+                alt="">
+            <div class="smallchild2">
+                <h2 class="text10">WOMEN</h2>
+                <div class="line"></div>
+
+
+            </div>
+            <div class="smallchild3">
+                <p class="para3">Quisquemo Sodales Cosmo De Milance
+                    from $59.99*</p>
+            </div>
+        </div>
+        <div class="childbox3">
+            <img class="img10" src="https://new-ella-demo.myshopify.com/cdn/shop/files/man-tricep_430x.jpg?v=1655173020"
+                alt="">
+            <div class="smallchild2">
+                <h2 class="text10">MEN</h2>
+                <div class="line"></div>
+
+
+            </div>
+            <div class="smallchild3">
+                <p class="para3">Quisquemo Sodales Cosmo De Milance
+                    from $59.99*</p>
+            </div>
+        </div>
+        <div class="childbox3">
+            <img class="img10" src="https://new-ella-demo.myshopify.com/cdn/shop/files/man-chest_430x.jpg?v=1655173030"
+                alt="">
+            <div class="smallchild2">
+                <h2 class="text10">SHOP OUTLET
+                </h2>
+                <div class="line"></div>
+
+
+            </div>
+            <div class="smallchild3">
+                <p class="para3">Quisquemo Sodales Cosmo De Milance
+                    from $59.99*</p>
+            </div>
+        </div>
+        <div class="childbox3">
+            <img class="img10" src="https://new-ella-demo.myshopify.com/cdn/shop/files/girl-gym_430x.jpg?v=1655173041"
+                alt="">
+            <div class="smallchild2">
+                <h2 class="text10">ACCESSORIES</h2>
+                <div class="line"></div>
+
+
+            </div>
+            <div class="smallchild3">
+                <p class="para3">Quisquemo Sodales Cosmo De Milance
+                    from $59.99*</p>
+            </div>
+        </div>
+    </div>
+    <div class="parent4">
+        <div class="childbox4">
+            <h1 class="text11">SEARCH FOR SOMETHING SPECIAL...</h1>
+        </div>
+        <div class="childbox5">
+
+            <input placeholder="Search entire store here" name="" id="inp2">
+
+            <div class="iconbox">
+                <i class="fa-solid fa-magnifying-glass glass2"></i>
+            </div>
+        </div>
+    </div>
+    <div class="parent5">
+        <div class="childbox6">
+            <div class="child">
+                <img class="img11"
+                    src="https://new-ella-demo.myshopify.com/cdn/shop/files/girl-tire_870x.jpg?v=1655180494" alt="">
+                <div class="textbox3">
+                    <h2 class="text12">NEVER GIVE UP</h2>
+                </div>
+                <div class="textbox4">
+                    <p class="para4">Quisquemos sodales suscipit de condimentum lacus.</p>
+                </div>
+                <button class="button3">SHOP NOW</button>
+            </div>
+            <div class="child">
+                <img class="img11"
+                    src="https://new-ella-demo.myshopify.com/cdn/shop/files/man-tire_870x.jpg?v=1655180534" alt="">
+                <div class="textbox3">
+                    <h2 class="text12">DARE TO BE GREAT</h2>
+                </div>
+                <div class="textbox4">
+                    <p class="para4">Quisquemos sodales suscipit de condimentum lacus.</p>
+                </div>
+                <button class="button3">SHOP NOW</button>
+            </div>
+        </div>
+        <div class="childbox7">
+            <img class="img12"
+                src="https://new-ella-demo.myshopify.com/cdn/shop/files/weight-lifting_870x.jpg?v=1655180557" alt="">
+            <div class="textbox5">
+                <h2 class="text12">BE STRONGER</h2>
+            </div>
+            <div class="textbox6">
+                <p class="para4">Quisquemos sodales suscipit de condimentum lacus.</p>
+            </div>
+            <button class="button4">SHOP NOW</button>
+        </div>
+    </div>
+    <div class="parent6">
+        <div class="childbox8">
+            <div class="smallbox17">
+                <h2 class="text14">FEATURED PRODUCTS</h2>
+            </div>
+            <div class="smallbox18">
+                <h3 class="text15">VIEW ALL</h3>
+                <div class="line3"></div>
+            </div>
+            <div class="playbox">
+                <i class="fa-sharp fa-solid fa-play play"></i>
+            </div>
+        </div>
+
+
+        <div class="childbox9">
+            <div class="slidbox3">
+                <div class="smallslide">
+                    <div class="picbox4">
+                        <img class="img18"
+                            src="https://new-ella-demo.myshopify.com/cdn/shop/products/product-new-10-c1_a16a3f6b-c059-47e2-941c-6e03e0999967_785x.jpg?v=1658977705"
+                            alt="">
+                        <img class="img19"
+                            src="https://new-ella-demo.myshopify.com/cdn/shop/products/product-new-7-a1_670x.jpg?v=1655695230"
+                            alt="">
+                        <div class="smalliconbox1">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="smalliconbox2">
+                            <i class="fa-regular fa-eye"></i>
+                        </div>
+                        <button class="button7">ADD TO CART</button>
+                    </div>
+                    <div class="textbox7">
+                        <div class="minibox13">
+                            <h3 class="texth1">Pharetras Loremos Onec Tiumam</h3>
+                            <div class="line2"></div>
+
+                        </div>
+                        <div class="minibox13">
+                            <i class="fa-solid fa-star star"></i>
+                            <i class="fa-solid fa-star star"></i>
+                            <i class="fa-solid fa-star star"></i>
+                            <i class="fa-solid fa-star star"></i>
+                            <i class="fa-solid fa-star star"></i>
+                        </div>
+                        <div class="minibox13">
+                            <h4 class="text13">$48.00</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="smallslide">
+                    <div class="picbox4">
+                        <img class="img18"
+                            src="https://new-ella-demo.myshopify.com/cdn/shop/products/product-new-7-a1_670x.jpg?v=1655695230"
+                            alt="">
+                        <img class="img19"
+                            src="https://new-ella-demo.myshopify.com/cdn/shop/products/product-new-10-c3_7ae7a014-06a8-4956-bc9c-91c415d54049_785x.jpg?v=1658977713"
+                            alt="">
+                        <div class="smalliconbox1">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="smalliconbox2">
+                            <i class="fa-regular fa-eye"></i>
+                        </div>
+                        <button class="button7">ADD TO CART</button>
+                    </div>
+                    <div class="textbox7">
+                        <div class="minibox13">
+                            <h3 class="texth1">Pharetras Loremos Onec Tiumam</h3>
+                            <div class="line2"></div>
+
+                        </div>
+                        <div class="minibox13">
+                            <i class="fa-solid fa-star star"></i>
+                            <i class="fa-solid fa-star star"></i>
+                            <i class="fa-solid fa-star star"></i>
+                            <i class="fa-solid fa-star star"></i>
+                            <i class="fa-solid fa-star star"></i>
+                        </div>
+                        <div class="minibox13">
+                            <h4 class="text13">$48.00</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="smallslide">
+                    <div class="picbox4">
+                        <img class="img18"
+                            src="https://new-ella-demo.myshopify.com/cdn/shop/products/product-new-11-a3_785x.jpg?v=1658992287"
+                            alt="">
+                        <img class="img19"
+                            src="https://new-ella-demo.myshopify.com/cdn/shop/products/product-new-7-a1_670x.jpg?v=1655695230"
+                            alt="">
+                        <div class="smalliconbox1">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="smalliconbox2">
+                            <i class="fa-regular fa-eye"></i>
+                        </div>
+                        <button class="button7">ADD TO CART</button>
+                    </div>
+                    <div class="textbox7">
+                        <div class="minibox13">
+                            <h3 class="texth1">Pharetras Loremos Onec Tiumam</h3>
+                            <div class="line2"></div>
+
+                        </div>
+                        <div class="minibox13">
+                            <i class="fa-solid fa-star star"></i>
+                            <i class="fa-solid fa-star star"></i>
+                            <i class="fa-solid fa-star star"></i>
+                            <i class="fa-solid fa-star star"></i>
+                            <i class="fa-solid fa-star star"></i>
+                        </div>
+                        <div class="minibox13">
+                            <h4 class="text13">$48.00</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="smallslide">
+                    <div class="picbox4">
+                        <img class="img18"
+                            src="https://new-ella-demo.myshopify.com/cdn/shop/products/product-new-15-a1_785x.jpg?v=1658992417"
+                            alt="">
+                        <img class="img19"
+                            src="https://new-ella-demo.myshopify.com/cdn/shop/products/product-new-7-a1_670x.jpg?v=1655695230"
+                            alt="">
+                        <div class="smalliconbox1">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="smalliconbox2">
+                            <i class="fa-regular fa-eye"></i>
+                        </div>
+                        <button class="button7">ADD TO CART</button>
+                    </div>
+                    <div class="textbox7">
+                        <div class="minibox13">
+                            <h3 class="texth1">Pharetras Loremos Onec Tiumam</h3>
+                            <div class="line2"></div>
+
+                        </div>
+                        <div class="minibox13">
+                            <i class="fa-solid fa-star star"></i>
+                            <i class="fa-solid fa-star star"></i>
+                            <i class="fa-solid fa-star star"></i>
+                            <i class="fa-solid fa-star star"></i>
+                            <i class="fa-solid fa-star star"></i>
+                        </div>
+                        <div class="minibox13">
+                            <h4 class="text13">$48.00</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="smallslide">
+                    <div class="picbox4">
+                        <img class="img18"
+                            src="https://new-ella-demo.myshopify.com/cdn/shop/products/product-new-10-c1_a16a3f6b-c059-47e2-941c-6e03e0999967_785x.jpg?v=1658977705"
+                            alt="">
+                        <img class="img19"
+                            src="https://new-ella-demo.myshopify.com/cdn/shop/products/product-new-7-a1_670x.jpg?v=1655695230"
+                            alt="">
+                        <div class="smalliconbox1">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="smalliconbox2">
+                            <i class="fa-regular fa-eye"></i>
+                        </div>
+                        <button class="button7">ADD TO CART</button>
+                    </div>
+                    <div class="textbox7">
+                        <div class="minibox13">
+                            <h3 class="texth1">Pharetras Loremos Onec Tiumam</h3>
+                            <div class="line2"></div>
+
+                        </div>
+                        <div class="minibox13">
+                            <i class="fa-solid fa-star star"></i>
+                            <i class="fa-solid fa-star star"></i>
+                            <i class="fa-solid fa-star star"></i>
+                            <i class="fa-solid fa-star star"></i>
+                            <i class="fa-solid fa-star star"></i>
+                        </div>
+                        <div class="minibox13">
+                            <h4 class="text13">$48.00</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="smallslide">
+                    <div class="picbox4">
+                        <img class="img18"
+                            src="https://new-ella-demo.myshopify.com/cdn/shop/products/product-new-10-c1_a16a3f6b-c059-47e2-941c-6e03e0999967_785x.jpg?v=1658977705"
+                            alt="">
+                        <img class="img19"
+                            src="https://new-ella-demo.myshopify.com/cdn/shop/products/product-new-7-a1_670x.jpg?v=1655695230"
+                            alt="">
+                        <div class="smalliconbox1">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="smalliconbox2">
+                            <i class="fa-regular fa-eye"></i>
+                        </div>
+                        <button class="button7">ADD TO CART</button>
+                    </div>
+                    <div class="textbox7">
+                        <div class="minibox13">
+                            <h3 class="texth1">Pharetras Loremos Onec Tiumam</h3>
+                            <div class="line2"></div>
+
+                        </div>
+                        <div class="minibox13">
+                            <i class="fa-solid fa-star star"></i>
+                            <i class="fa-solid fa-star star"></i>
+                            <i class="fa-solid fa-star star"></i>
+                            <i class="fa-solid fa-star star"></i>
+                            <i class="fa-solid fa-star star"></i>
+                        </div>
+                        <div class="minibox13">
+                            <h4 class="text13">$48.00</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="smallslide">
+                    <div class="picbox4">
+                        <img class="img18"
+                            src="https://new-ella-demo.myshopify.com/cdn/shop/products/product-new-10-c1_a16a3f6b-c059-47e2-941c-6e03e0999967_785x.jpg?v=1658977705"
+                            alt="">
+                        <img class="img19"
+                            src="https://new-ella-demo.myshopify.com/cdn/shop/products/product-new-7-a1_670x.jpg?v=1655695230"
+                            alt="">
+                        <div class="smalliconbox1">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="smalliconbox2">
+                            <i class="fa-regular fa-eye"></i>
+                        </div>
+                        <button class="button7">ADD TO CART</button>
+                    </div>
+                    <div class="textbox7">
+                        <div class="minibox13">
+                            <h3 class="texth1">Pharetras Loremos Onec Tiumam</h3>
+                            <div class="line2"></div>
+
+                        </div>
+                        <div class="minibox13">
+                            <i class="fa-solid fa-star star"></i>
+                            <i class="fa-solid fa-star star"></i>
+                            <i class="fa-solid fa-star star"></i>
+                            <i class="fa-solid fa-star star"></i>
+                            <i class="fa-solid fa-star star"></i>
+                        </div>
+                        <div class="minibox13">
+                            <h4 class="text13">$48.00</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="smallslide">
+                    <div class="picbox4">
+                        <img class="img18"
+                            src="https://new-ella-demo.myshopify.com/cdn/shop/products/product-new-10-c1_a16a3f6b-c059-47e2-941c-6e03e0999967_785x.jpg?v=1658977705"
+                            alt="">
+                        <img class="img19"
+                            src="https://new-ella-demo.myshopify.com/cdn/shop/products/product-new-7-a1_670x.jpg?v=1655695230"
+                            alt="">
+                        <div class="smalliconbox1">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="smalliconbox2">
+                            <i class="fa-regular fa-eye"></i>
+                        </div>
+                        <button class="button7">ADD TO CART</button>
+                    </div>
+                    <div class="textbox7">
+                        <div class="minibox13">
+                            <h3 class="texth1">Pharetras Loremos Onec Tiumam</h3>
+                            <div class="line2"></div>
+
+                        </div>
+                        <div class="minibox13">
+                            <i class="fa-solid fa-star star"></i>
+                            <i class="fa-solid fa-star star"></i>
+                            <i class="fa-solid fa-star star"></i>
+                            <i class="fa-solid fa-star star"></i>
+                            <i class="fa-solid fa-star star"></i>
+                        </div>
+                        <div class="minibox13">
+                            <h4 class="text13">$48.00</h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="parent7">
+        <div class="childbox10">
+            <div class="textbox10">
+                <h1 class="heading">ABOUT THE SHOP</h1>
+            </div>
+            <p class="para5">Nam tempus turpis at metus scelerisque placerat nulla deumantos sollicitudin felis.
+                Pellentesque diam dolor, elementum et lobortis delio mollis ut risus.
+                Sedcuman des faucibus andor sullamcorper mattis fusce molestie elit a lorem tempus scelerisque blandit
+                est cursus. Quisque volutpat orci dero metus
+                malesuada in interdumos lectus anmos scelerisque mor lorem. Praesent deu odio des nisios delos
+                dullamcorper sultricies.</p>
+        </div>
+        <div class="childbox11">
+            <div class="minibox14">
+                <div class="iconbox2">
+                    <img class="img20"
+                        src="https://new-ella-demo.myshopify.com/cdn/shop/files/home-gym-custom-service-block-1.png?v=1655193292"
+                        alt="">
+                </div>
+                <div class="iconbox3">
+                    <h3 class="text16">HAVE QUESTIONS?</h3>
+                </div>
+                <div class="iconbox4">
+                    <h3 class="text16">EMAIL US</h3>
+                    <div class="line4"></div>
+                </div>
+            </div>
+            <div class="minibox14">
+                <div class="iconbox2">
+                    <img class="img20"
+                        src="https://new-ella-demo.myshopify.com/cdn/shop/files/home-gym-custom-service-block-2.png?v=1655193292"
+                        alt="">
+                </div>
+                <div class="iconbox3">
+                    <h3 class="text16">CALL US</h3>
+                </div>
+                <div class="iconbox4">
+                    <h3 class="text16">(091) 123-TRIBE</h3>
+                    <div class="line4"></div>
+                </div>
+            </div>
+            <div class="minibox14">
+                <div class="iconbox2">
+                    <img class="img20"
+                        src="https://new-ella-demo.myshopify.com/cdn/shop/files/home-gym-custom-service-block-3.png?v=1655193292"
+                        alt="">
+                </div>
+                <div class="iconbox3">
+                    <h3 class="text16">ONLINE HELP</h3>
+                </div>
+                <div class="iconbox4">
+                    <h3 class="text16">LIVE CHAT</h3>
+                    <div class="line4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="parent8">
+        <div class="childbox12">
+            <i class="fa-brands fa-instagram insta"></i>
+            <h1 class="text17">#IMAGE GALLERY</h1>
+        </div>
+        <div class="childbox13">
+            <div class="picbox5">
+                <img class="img21"
+                    src="https://new-ella-demo.myshopify.com/cdn/shop/files/home-gym-instagram-1.jpg?v=1655177241"
+                    alt="">
+                <div class="blackbox">
+                    <div class="centerbox">
+                        <i class="fa-solid fa-plus plus"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="picbox5">
+                <img class="img21"
+                    src="https://new-ella-demo.myshopify.com/cdn/shop/files/home-gym-instagram-2.jpg?v=1655177241"
+                    alt="">
+                <div class="blackbox">
+                    <div class="centerbox">
+                        <i class="fa-solid fa-plus plus"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="picbox5">
+                <img class="img21"
+                    src="https://new-ella-demo.myshopify.com/cdn/shop/files/home-gym-instagram-3.jpg?v=1655177241"
+                    alt="">
+                <div class="blackbox">
+                    <div class="centerbox">
+                        <i class="fa-solid fa-plus plus"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="picbox5">
+                <img class="img21"
+                    src="https://new-ella-demo.myshopify.com/cdn/shop/files/home-gym-instagram-4.jpg?v=1655177241"
+                    alt="">
+                <div class="blackbox">
+                    <div class="centerbox">
+                        <i class="fa-solid fa-plus plus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="button8">VIEW GALLERY</button>
+    </div>
+    <div class="parent9">
+        <div class="childbox14">
+            <div class="headingbox3">
+                <h1 class="text18">JOIN OUR MAILING LIST</h1>
+            </div>
+            <div class="typebox">
+                <input placeholder="Your email address" name="" id="inp3">
+                <button class="button9">SUBSCRIBE</button>
+            </div>
+        </div>
+        <div class="childbox15">
+            <div class="typebox2">
+                <img class="img22"
+                    src="https://new-ella-demo.myshopify.com/cdn/shop/files/home-gym-footer-logo_200x.png?v=1655172725"
+                    alt="">
+            </div>
+            <div class="lastbox">
+                <div class="typebox3">
+                    <span class="spn5">SHOP</span>
+                    <ul class="content3">
+                        <li class="list3">New In</li>
+                    </ul>
+                    <ul class="content3">
+                        <li class="list3">Women</li>
+                    </ul>
+                    <ul class="content3">
+                        <li class="list3">Men</li>
+                    </ul>
+                    <ul class="content3">
+                        <li class="list3">Shoes</li>
+                    </ul>
+                    <ul class="content3">
+                        <li class="list3">Bags & Accessories</li>
+                    </ul>
+                    <ul class="content3">
+                        <li class="list3">Top Brands</li>
+                    </ul>
+                    <ul class="content3">
+                        <li class="list3">Sale & Special Offers</li>
+                    </ul>
+                </div>
+                <div class="typebox3">
+                    <span class="spn5">INFORMATION</span>
+                    <ul class="content3">
+                        <li class="list3">About</li>
+                    </ul>
+                    <ul class="content3">
+                        <li class="list3">Customer Service</li>
+                    </ul>
+                    <ul class="content3">
+                        <li class="list3">Reward Program</li>
+                    </ul>
+                    <ul class="content3">
+                        <li class="list3">Shipping & Returns</li>
+                    </ul>
+                    <ul class="content3">
+                        <li class="list3">Privacy Policy</li>
+                    </ul>
+                    <ul class="content3">
+                        <li class="list3">Terms & Conditions</li>
+                    </ul>
+                    <ul class="content3">
+                        <li class="list3">Blog</li>
+                    </ul>
+                </div>
+                <div class="typebox3">
+                    <span class="spn5">CUSTOMER SERVICE</span>
+                    <ul class="content3">
+                        <li class="list3">Search Terms</li>
+                    </ul>
+                    <ul class="content3">
+                        <li class="list3">Advanced Search</li>
+                    </ul>
+                    <ul class="content3">
+                        <li class="list3">Orders And Returns</li>
+                    </ul>
+                    <ul class="content3">
+                        <li class="list3">Contact Us</li>
+                    </ul>
+                    <ul class="content3">
+                        <li class="list3">Theme FAQs</li>
+                    </ul>
+                    <ul class="content3">
+                        <li class="list3">Consultant</li>
+                    </ul>
+                    <ul class="content3">
+                        <li class="list3">Store Locations</li>
+                    </ul>
+                </div>
+                <div class="typebox3">
+                    <span class="spn5">INFO</span>
+                    <h2 class="text19">685 MARKET STREET</h2>
+                    <h2 class="text19">SAN FRANCISCO, CA 94105</h2>
+                    <h2 class="text19">CALL US AT (091) 123-TRIBES</h2>
+                    <div class="box10">
+                        <div class="circle3">
+                            <i class="fa-brands fa-facebook-f fa"></i>
+                        </div>
+                        <div class="circle3">
+                            <i class="fa-brands fa-instagram  fa"></i>
+                        </div>
+                        <div class="circle3">
+                            <i class="fa-brands fa-pinterest-p  fa"></i>
+                        </div>
+                        <div class="circle3">
+                            <i class="fa-brands fa-youtube  fa"></i>
+                        </div>
+                        <div class="circle3">
+                            <i class="fa-brands fa-twitter  fa"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="parent10">
+        <div class="lastchild">
+            <P class="para6">
+                © 2022 Ella Demo. Powered by Shopify. Shopify Themes by HaloThemes.com
+            </P>
+        </div>
+        <div class="lastchild2">
+            <div class="lastbox2">
+                <i class="fa-brands fa-cc-visa visa"></i>
+            </div>
+            <div class="lastbox2">
+                <i class="fa-brands fa-cc-mastercard visa"></i>
+            </div>
+            <div class="lastbox2">
+                <i class="fa-brands fa-cc-visa visa"></i>
+            </div>
+            <div class="lastbox2">
+                <i class="fa-brands fa-cc-mastercard visa"></i>
+            </div>
+            <div class="lastbox2">
+                <i class="fa-brands fa-cc-visa visa"></i>
+            </div>
+            <div class="lastbox2">
+                <i class="fa-brands fa-cc-mastercard visa"></i>
+            </div>
+            <div class="lastbox2">
+                <i class="fa-brands fa-cc-visa visa"></i>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
